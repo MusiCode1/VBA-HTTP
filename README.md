@@ -9,14 +9,14 @@ Sub SaveToFile()
     Dim file_name As String
     
     
-    http1.url = "http://forum.enativ.com/filebase.php?d=1&id=816&f=816&what=c&c_old=6&page=1"
+    http1.url = "https://file-examples.com/storage/fee9d866f762c2ea69ae2a5/2017/04/file_example_MP4_1280_10MG.mp4"
 
     
     http1.send False
     
     http1.WaitForResponse
     
-    file_name = "E:\User\Downloads\" 'Application.CurrentProject.path & "\"
+    file_name = "C:\User\Downloads\"
     
     file_name = file_name & http1.get_header("Content-Disposition")("filename")
     
